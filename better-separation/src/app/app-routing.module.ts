@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { RetailerGuard } from './core/guards/retailer.guard';
 
 const routes: Routes = [
   {
@@ -12,6 +13,7 @@ const routes: Routes = [
   },
   {
     path: 'retailer',
+    canLoad: [RetailerGuard],
     loadChildren: () => import('./retailer/retailer.module').then(m => m.RetailerModule)
   }];
 
