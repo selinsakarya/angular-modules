@@ -1,0 +1,7 @@
+<div class="products" fxLayout="row wrap" fxLayoutGap="20">
+  <mat-card  *ngFor="let product of products">
+    <p>{{ product.name }}</p>
+    <p>Price: €{{ product.price }}</p>
+    <button color="primary" mat-flat-button>Add to cart</button>
+  </mat-card>
+</div>

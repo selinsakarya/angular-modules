@@ -1,0 +1,17 @@
+<div class="retailer">
+  <h1>Welcome, {{ retailer.name }}</h1>
+  <p>Address: {{ retailer.address }}</p>
+
+  <div>
+    <h2>You are selling:</h2>
+    <div fxLayout="row wrap" fxLayoutGap="20">
+      <mat-card  *ngFor="let product of retailer.products">
+        <p>{{ product.name }}</p>
+        <p>Price: €{{ product.price }}</p>
+        <p> {{ product.stock }} left </p>
+        <button color="primary" mat-flat-button>Update</button>
+        <button color="accent" mat-flat-button>Remove</button>
+      </mat-card>
+    </div>
+  </div>
+</div>

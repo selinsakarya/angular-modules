@@ -1,0 +1,13 @@
+<div class="shopping-card">
+  <p *ngFor="let product of shoppingCart.products">
+    {{ product.name }} - € {{ product.price }}
+  </p>
+  <hr />
+  <p>Sub Total: € {{ shoppingCart.subTotal }}</p>
+  <p>Discount: % {{ shoppingCart.discount }} off</p>
+  <p>
+    <b>Total: € {{ shoppingCart.total }}</b>
+  </p>
+
+  <button mat-flat-button color="accent">Purchase</button>
+</div>
