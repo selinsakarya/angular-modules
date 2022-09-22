@@ -1,4 +1,7 @@
+import { Injectable } from '@angular/core';
 import { Retailer } from '../models/retailer';
+
+@Injectable()
 export class RetailerService {
   constructor() {
     console.log('RetailerService is initialized at ' + Date())
